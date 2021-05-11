@@ -1,0 +1,17 @@
+package Arrays;
+
+import java.util.Arrays;
+
+public class arraysUtilMethods {
+
+	public static void main(String[] args) {
+		Integer[] arr=new Integer[]{1,2,3,4};
+		//Arrays.asList() treats array as list which is a collection 
+		//but it does not convert array to a list
+		
+		System.out.println(Arrays.asList(arr));
+		System.out.println((Arrays.asList(arr)).get(1));
+
+	}
+
+}

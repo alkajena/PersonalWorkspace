@@ -1,0 +1,42 @@
+package AlgorithmPractice;
+
+public class PalindromePartition {
+
+	public static void main(String[] args) {
+		String str = "ababbbabbababa"; 
+		 System.out.println("Min cuts needed for "
+                 + "Palindrome Partitioning is " + palindromePartition(str)); 
+
+	}
+	public static int palindromePartition(String s){
+		int n=s.length();
+		boolean[][] p=new boolean[n+1][n+1];
+		int[][] c=new int[n+1][n+1];
+		
+		for(int i=0;i<n;i++){
+			p[i][i]=true;
+			c[i][i]=0;
+		}
+		int end;
+		for(int len=2;len<=n;len++){
+			for(int st=0;st<=n-len;st++){
+				 end=st+len-1;
+				if(len==2)
+					p[st][end]=(s.charAt(st)==s.charAt(end));
+				else
+					p[st][end]=s.charAt(st)==s.charAt(end) && p[st+1][end-1];
+				
+				if(p[st][end])
+					c[st][end]=0;
+				else{
+					c[st][end]=Integer.MAX_VALUE;
+					for(int k=st;k<=end-1;k++)
+						c[st][end]=Math.min(c[st][end], c[st][k]+c[k+1][end]+1);
+				}
+			}
+		}
+		return c[0][n-1];
+		
+	}
+}
+s

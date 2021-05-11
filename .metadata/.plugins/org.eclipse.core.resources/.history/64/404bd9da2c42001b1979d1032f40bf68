@@ -1,0 +1,11 @@
+package Algorithms;
+
+public class PrintAllSubstring {
+
+	public static void main(String[] args) {
+		String str="ABCD";
+		
+
+	}
+
+}

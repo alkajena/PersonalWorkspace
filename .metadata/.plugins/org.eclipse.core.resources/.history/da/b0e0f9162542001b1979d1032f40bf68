@@ -1,0 +1,12 @@
+package Algorithms;
+
+public class ConsecutiveSequence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static int countSequence(char[][] arr,int i,int j,int r,int c){
+		
+	}
+}

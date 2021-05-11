@@ -1,0 +1,25 @@
+package Algorithms;
+
+public class MinimumNoOfSquares {
+
+	public static void main(String[] args) {
+		int n=100;
+		
+		
+
+	}
+	
+	public static int square(int n){
+		int res=n;
+		if(n<=3)
+			return n;
+		for(int i=1;i<n;i++){
+			int k=i*i;
+			if(k > n)
+				break;
+			res= Math.min(res, 1+square(n-k));
+		}
+		return res;
+	}
+
+}

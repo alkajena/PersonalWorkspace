@@ -1,0 +1,13 @@
+package Arrays;
+
+import java.util.Arrays;
+
+public class arraysUtilMethods {
+
+	public static void main(String[] args) {
+		Integer[] arr=new Integer[]{1,2,3,4};
+		System.out.println((Arrays.asList(arr)).get(1));
+
+	}
+
+}

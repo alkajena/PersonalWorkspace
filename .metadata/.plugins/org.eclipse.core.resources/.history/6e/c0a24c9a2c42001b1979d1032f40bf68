@@ -1,0 +1,36 @@
+package Algorithms;
+
+public class SubstringMadeBySpaces {
+
+	public static void main(String[] args) {
+		String str="ABCD";
+		int n=str.length();
+		char[] buff=new char[2*n];
+		buff[0]=str.charAt(0);
+		printSubstring(buff, 1, 1, n, str);
+
+	}
+	public static void printSubstring(char[] buff,int i,int j,int n,String str){
+		if(i==n){
+			buff[j]='\0';
+			System.out.println(buff);
+			return;
+		}
+		
+		if(i <= n && j<=n){
+			buff[j]=str.charAt(i);
+			printSubstring(buff, i+1, j+1, n, str);
+		}
+			
+		
+		
+		buff[j]=' ';
+		buff[j+1]=str.charAt(i);
+		printSubstring(buff, i+1, j+2, n, str);
+		
+		buff[j]=' ';
+		buff[j+1]=str.charAt(i);
+		buff[j+2]=' ';
+		printSubstring(buff, i+1, j+2, n, str);
+	}
+}

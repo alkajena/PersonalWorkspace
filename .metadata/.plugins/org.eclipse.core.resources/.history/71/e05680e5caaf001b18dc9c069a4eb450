@@ -1,0 +1,66 @@
+package Algorithms;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class EmployeeTest {
+	
+	private String name;
+	private int id;
+	
+	
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public static void main(String[] args) {
+		EmployeeTest t1=new EmployeeTest();
+		t1.setId(1);
+		t1.setName("alka");
+		
+		EmployeeTest t2=new EmployeeTest();
+		t2.setId(1);
+		t2.setName("alka");
+		
+		
+		Set<EmployeeTest> set=new HashSet<>();
+		set.add(t1);
+		set.add(t2);
+		
+		System.out.println(set.size());
+		
+		
+
+	}
+	@Override
+	public boolean equals(Object o){
+		EmployeeTest t3=(EmployeeTest)o;
+		if(this.getId()==t3.getId() && this.getName().equals(t3.getName())){
+			System.out.println("equal");
+			return true;
+		}
+		return false;
+	}
+
+}

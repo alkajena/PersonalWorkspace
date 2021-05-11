@@ -1,0 +1,17 @@
+package Files;
+
+public class SerializationDeserialization {
+
+	public static void main(String[] args) {
+		try
+        { 
+            fun(); 
+        } 
+        catch(NullPointerException e) 
+        { 
+            System.out.println("Caught in main."); 
+        }
+
+	}
+
+}

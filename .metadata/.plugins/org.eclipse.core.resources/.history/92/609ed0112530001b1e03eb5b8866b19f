@@ -1,0 +1,38 @@
+package Arrays;
+
+public class arraysPassByValues {
+
+	public static void main(String[] args) {
+		Integer[] arr=new Integer[]{1,2,3,4};
+		 int x= arr[0];
+		 sum(x);
+		// System.out.println(x);
+		 
+		 Student i1=new Student();
+		 i1.id=10;
+		 Student i2=new Student();
+		 i2.id=20;
+		 
+		 sum(i1);
+		 System.out.println(i1.id);
+		 
+	}
+	
+	public static int sum(int x){
+		x=x+10;
+		//System.out.println(x);
+		return x+10;
+	}
+	
+	public static Student sum(Student i){
+		i.id=20;
+		return i;	
+	}
+
+}
+
+class Student{
+	public int id;
+	
+	
+}

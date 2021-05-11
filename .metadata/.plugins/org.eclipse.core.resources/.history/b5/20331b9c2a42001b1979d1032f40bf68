@@ -1,0 +1,14 @@
+package Algorithms;
+
+public class SubstringMadeBySpaces {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void printSubstring(char[] buff,int i,int j,int n){
+		if(i==n){
+			buff[j]='\0';
+		}
+	}
+}

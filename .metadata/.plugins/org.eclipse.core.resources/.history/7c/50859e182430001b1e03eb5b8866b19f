@@ -1,0 +1,29 @@
+package Arrays;
+
+public class arraysPassByValues {
+
+	public static void main(String[] args) {
+		Integer[] arr=new Integer[]{1,2,3,4};
+		 int x= arr[0];
+		 sum(x);
+		 System.out.println(x);
+		 
+		 Integer i1=new Integer(10);
+		 Integer i2=new Integer(20);
+		 
+		 sum(i1);
+		 
+	}
+	
+	public static int sum(int x){
+		x=x+10;
+		System.out.println(x);
+		return x+10;
+	}
+	
+	public static int sum(Integer i){
+		i=30;
+		return i;	
+	}
+
+}

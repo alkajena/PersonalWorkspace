@@ -1,0 +1,25 @@
+package Algorithms;
+
+public class WordWrap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void wordWrap(int[] arr,int n){
+		int i,j,cost;
+		int[] dp=new int[n+1];
+		int[] ans=new int[n+1];
+	
+		dp[n-1]=0;
+		ans[n-1]=n-1;
+		
+		for(i=n-2;i>=0;i--){
+			int currentLine=-1;
+			dp[i]=Integer.MAX_VALUE;
+			for(j=i;j<=n;j++){
+				
+			}
+		}
+	}
+}

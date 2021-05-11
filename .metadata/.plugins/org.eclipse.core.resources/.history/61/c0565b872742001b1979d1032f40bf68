@@ -1,0 +1,10 @@
+package Algorithms;
+
+public class MinimumNoOfSquares {
+
+	public static void main(String[] args) {
+		int n=100;
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package MultiThreading;
+
+public class MultiThreadingDemo {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+class ChildThread extends Thread{
+	
+	@Override
+	public void run(){
+		System.out.println("Inside child thread");
+		
+	}
+}

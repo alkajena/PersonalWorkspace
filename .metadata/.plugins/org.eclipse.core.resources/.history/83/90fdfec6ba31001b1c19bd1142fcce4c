@@ -1,0 +1,77 @@
+package Arrays;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class arraysPassByValues {
+
+	public static void main(String[] args) {
+		Integer[] arr=new Integer[]{1,2,3,4};
+		Object[] obj=new Object[]{2,"alka",'c',3.4};
+		System.out.println(obj[1]);
+		 int x= arr[0];
+		 sum(x);
+		// System.out.println(x);
+		 
+		 Student i1=new Student();
+		 i1.id=10;
+		 Student i2=new Student();
+		 i2.id=20;
+		 
+		 sum(i1);
+		 System.out.println(i1.id);
+		 
+		 Integer[] a = new Integer[]{1,2,3}; 
+	        Integer[] b = new Integer[]{4,5,6}; 
+	     // Create an empty List of type Object 
+	        List<Object> n = new ArrayList<>(); 
+	          
+	        // Add the array a into n 
+	       // Collections.addAll(n, a); 
+	        n.addAll(Arrays.asList(a));	          
+	        // Add the array b into n 
+	        //Collections.addAll(n, b); 
+	        n.addAll(Arrays.asList(b));	   
+	        System.out.println("Merged object array : "
+                    + n); 
+	        System.out.println(Collections.max(Arrays.asList(a)));
+	        
+	        //to find largest difference between two elements in an array 
+	        //is the difference between minimum and maximum element i the array
+	        
+	        Arrays.sort(a,Collections.reverseOrder());
+	        System.out.println("Merged object array : "
+                    + Arrays.asList(a)); 
+	        
+	        System.out.println(Collections.frequency(Arrays.asList(a), 1));
+	       
+	        //Find Occurrence of Number More Than N/2 Times in a Sorted Array in Java
+	        
+	        //convert given array to list and then use Collections.frequency(list, x);
+	        
+	        //do binary serach for both upper bound and lower bbound
+	        
+		 
+	}
+	
+	public static int sum(int x){
+		x=x+10;
+		//System.out.println(x);
+		return x+10;
+	}
+	
+	public static Student sum(Student i){
+		i=new Student();
+		i.id=40;
+		return i;	
+	}
+
+}
+
+class Student{
+	public int id;
+	
+	
+}

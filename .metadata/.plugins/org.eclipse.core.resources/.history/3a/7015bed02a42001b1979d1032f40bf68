@@ -1,0 +1,21 @@
+package Algorithms;
+
+public class SubstringMadeBySpaces {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void printSubstring(char[] buff,int i,int j,int n,String str){
+		if(i==n){
+			buff[j]='\0';
+			System.out.println(buff);
+		}
+		
+		buff[j]=str.charAt(i);
+		printSubstring(buff, i+1, j+1, n, str);
+		
+		buff[j]=' ';
+		buff[j+1]=str.charAt(i);
+	}
+}

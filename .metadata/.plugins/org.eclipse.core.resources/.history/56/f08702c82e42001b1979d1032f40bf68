@@ -1,0 +1,22 @@
+package Algorithms;
+
+public class NextPalindrome {
+
+	public static void main(String[] args) {
+		
+		int num=1234;
+		
+		if(num%2==0){
+			System.out.print("the number is even");
+			String even=Integer.toString(num);
+			
+		}
+		else{
+			
+		}
+
+	}
+	
+	
+
+}

@@ -1,0 +1,42 @@
+package Arrays;
+
+import java.util.Arrays;
+
+public class arraysUtilMethods {
+
+	public static void main(String[] args) {
+		Integer[] arr=new Integer[]{1,2,6,8};
+		int[] arr1={1,2,6,8};
+		int[] arr2={5,7,9,11};
+		/*Arrays.asList() treats array as list which is a collection 
+		but it does not convert array to a list so any kind of modifications 
+		operations can not be done but reading(getting)/iterations can be done*/
+		
+		System.out.println(Arrays.asList(arr));
+		System.out.println((Arrays.asList(arr)).get(1));
+		
+		/*Arrays.binarySearch search specified element 
+		 * with the help of binary search algorithm if key is present gives taht index 
+		 * if not present then check the exact position of given key in sorted array
+		 * and provide a negative of that index*/
+		
+		System.out.println(Arrays.binarySearch(arr, 3));
+		//1 is fromIndex and 3 is toIndex
+		System.out.println(Arrays.binarySearch(arr,1,3, 3));
+		
+		//Arrays.copyOf(arr,newLength)..It will copy the specified array 
+		//with padding or truncating default values to te given array
+		arr=Arrays.copyOf(arr, 6);
+		System.out.println(Arrays.asList(Arrays.copyOf(arr, 6)));
+		arr[4]=88;
+		System.out.println(Arrays.asList(arr));
+		
+		//Arrays.copyOfRange(arr,fromIndex,toIndex)..same as copyOf
+		System.out.println(Arrays.copyOfRange(arr,1,3));
+		
+		
+		
+
+	}
+
+}

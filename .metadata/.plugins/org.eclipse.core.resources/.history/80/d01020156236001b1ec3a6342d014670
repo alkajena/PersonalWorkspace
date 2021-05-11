@@ -1,0 +1,26 @@
+package MultiThreading;
+
+public class InterThreadCommunication {
+
+	public static void main(String[] args) {
+		MyThread2 t=new MyThread2();
+		t.start();
+		synchronized(t){
+			
+		}
+
+	}
+
+}
+
+class MyThread2 extends Thread{
+	
+	@Override
+	public void run(){
+		synchronized(this){
+			System.out.println("Inside child thread..before notify()");
+			this.notify();
+			System.out.println("Inside child thread..after notify()");
+		}
+	}
+}
